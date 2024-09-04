@@ -1,8 +1,14 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import todo_icon from '../assets/todo_icon.png'
 import TodoItems from './TodoItems'
 
 const Todo = () => {
+    const inputRef = useRef();
+
+    const add = () => {
+        const inputText = inputRef.current.value.trim();
+        console.log(inputText);
+    }
   return (
     <div className='bg-blue-300 place-self-center w-11/12 max-w-md flex flex-col p-7 min-h-[500px] rounded-3xl'>
         
@@ -21,8 +27,8 @@ const Todo = () => {
     {/* input box  */}
 
         <div className='flex items-center my-3 bg-yellow-200 rounded-full'>
-            <input className='bg-transparent border-0 outline-none flex-1 h-10 pl-6 pr-3 placeholder:text-slate-600' type='text' placeholder='Add your task'/>
-            <button className='border-none rounded-full bg-orange-600 w-32 h-10 text-white'>ADD +</button>
+            <input ref={inputRef} className='bg-transparent border-0 outline-none flex-1 h-10 pl-6 pr-3 placeholder:text-slate-600' type='text' placeholder='Add your task'/>
+            <button onClick={add} className='border-none rounded-full bg-orange-600 w-32 h-10 text-white'>ADD +</button>
         </div>
 
     {/* list of added items */}
