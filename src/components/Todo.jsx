@@ -19,9 +19,20 @@ const Todo = () => {
         text: inputText,
         isComplete: false,
     }
+    //  const handleKeyDown = (event) => {
+    // if (event.key === 'Enter') {
+    //   handleAddTodo();
+    // }
+
     setTodoList((prev) => [...prev, newTodo]);
     inputRef.current.value = "";
 }
+
+    const editTodo = (id) => {
+            setTodoList((newTodo) => {
+            return newTodo.map((todo) => todo.id !==id)
+            })
+        }     
 
     const deleteTodo = (id) => {
         setTodoList((prvTodos) => {
@@ -69,7 +80,7 @@ const Todo = () => {
 
         <div>
             {todoList.map((item, index) => {
-                return <TodoItems key={index} text={item.text} id={item.id} isComplete={item.isComplete} deleteTodo={deleteTodo} toggle={toggle}/>
+                return <TodoItems key={index} text={item.text} id={item.id} isComplete={item.isComplete} editTodo={editTodo} deleteTodo={deleteTodo} toggle={toggle}/>
             })}
     
         </div>
