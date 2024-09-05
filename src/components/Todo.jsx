@@ -4,7 +4,7 @@ import TodoItems from './TodoItems'
 
 const Todo = () => {
 
-    const[todoList, setTodoList] = useState([]);
+    const [todoList, setTodoList] = useState([]);
     const inputRef = useRef();
 
     const add = () => {
@@ -22,6 +22,14 @@ const Todo = () => {
     setTodoList((prev) => [...prev, newTodo]);
     inputRef.current.value = "";
 }
+
+    const deleteTodo = (id) => {
+        setTodoList((prvTodos) => {
+          return  prvTodos.filter((todo) => todo.id !==id)
+        })
+    } 
+
+
   return (
     <div className='bg-blue-300 place-self-center w-11/12 max-w-md flex flex-col p-7 min-h-[500px] rounded-3xl'>
         
@@ -48,7 +56,7 @@ const Todo = () => {
 
         <div>
             {todoList.map((item, index) => {
-                return <TodoItems key={index} text={item.text} id={item.id} isComplete={item.isComplete}/>
+                return <TodoItems key={index} text={item.text} id={item.id} isComplete={item.isComplete} deleteTodo={deleteTodo}/>
             })}
     
         </div>
