@@ -5,6 +5,7 @@ import delete_icon from '../assets/delete.png'
 import edit from '../assets/edit.png'
 
 
+
 const TodoItems = ({text, id, isComplete, editTodo, deleteTodo, toggle}) => {
   return (
     <div className='flex items-center my-3 gap-2'>

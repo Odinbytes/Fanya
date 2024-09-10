@@ -1,6 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react'
 import todo_icon from '../assets/todo_icon.png'
 import TodoItems from './TodoItems'
+import search from '../assets/search.png'
 
 const Todo = () => {
 
@@ -71,9 +72,10 @@ const Todo = () => {
 
     {/* input box  */}
 
-        <div className='flex items-center my-3 bg-yellow-200 rounded-full'>
-            <input ref={inputRef} className='bg-transparent border-0 outline-none flex-1 h-10 pl-6 pr-3 placeholder:text-slate-600' type='text' placeholder='Add your task'/>
+        <div className='flex items-center my-2 bg-yellow-200 rounded-full'>
+            <input ref={inputRef} className='bg-transparent border-0 outline-none flex-1 h-10 pl-6 pr-14 placeholder:text-slate-600' type='text' placeholder='Add your task'/>
             <button onClick={add} className='border-none rounded-full bg-orange-600 w-32 h-10 text-white'>ADD +</button>
+            <img onClick={() => {searchTodo(id)}} src={search} alt="" className='w-5 cursor-pointer'/>
         </div>
 
     {/* list of added items */}
