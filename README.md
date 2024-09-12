@@ -1,3 +1,10 @@
-This is a To Do List App called Kora that I developed as part of my learning process. I used Reactjs and Tailwind CSS.
-It allows the user to add an item to the list, mark it as done(with a strike through) or not done, edit it, search an item on the list as well as delete an item.
-It also stores the new items in an array.
+Description
+The To-Do List App is a simple, efficient task management application built using React and styled with Tailwind CSS. It allows users to add, edit, delete, and mark tasks as complete, helping them stay organized and productive. With a clean and responsive interface, the app provides an intuitive user experience across all devices.
+
+Features
+Add Tasks: Quickly add new tasks with a simple input form.
+Edit Tasks: Modify existing tasks in the list.
+Delete Tasks: Remove tasks when no longer needed.
+Mark as Complete: Check off tasks to indicate they’ve been completed.
+Persistent Data: Task list is saved in local storage, so it persists between sessions.
+Responsive Design: Built with Tailwind CSS to ensure a mobile-friendly and clean design.
