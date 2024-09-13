@@ -17,4 +17,4 @@ The To-Do List App is a simple, efficient task management application built with
 5. Backend Integration: Add a database or server-side storage to sync tasks across multiple devices.
 
 **Contributing**
-Contributions are welcome! Feel free to fork this repository and submit a pull request. If you find any bugs or have feature requests, please open an issue.
+Contributions are welcome! Feel free to fork this repository and submit a pull request. If you find any bugs or have feature requests, please feel free to opem an issue or reach out.
